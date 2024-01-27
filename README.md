@@ -1,6 +1,13 @@
 # 🌟 Discord Bot Docker 🐋 Environment 🌟
 
-[![License](https://img.shields.io/badge/license-GNU-blue.svg)](https://github.com/Azshurith/Dockerized-Discord-Bot/blob/main/LICENSE)
+<p align="left">
+  <a href="https://github.com/Azshurith/Dockerized-Discord-Bot/blob/main/LICENSE">
+    <img src="https://img.shields.io/badge/license-GNU-blue.svg" alt="License" />
+  </a>
+  <a href="https://discord.gg/uedEyETbAB">
+    <img src="https://img.shields.io/discord/1140211552880971816?color=5865F2&logo=discord&logoColor=white" alt="Discord server" />
+  </a>
+</p>
 
 This repository contains a Docker environment for a discord bot for development and deployment.
 
@@ -33,7 +40,7 @@ BOT_TOKEN=
 ### Installation 📦
 
 1. Set up your environment variables in the .env file.
-2. Run make start_project to start the Docker environment.
+2. Run `make start_project` to start the Docker environment.
 3. Invite your discord bot to your discord server.
 
 ## Contributing 🤝
