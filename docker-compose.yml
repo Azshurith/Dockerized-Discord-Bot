@@ -1,0 +1,16 @@
+# Define the Docker Compose version
+version: "3"
+
+# Define the services that make up your application
+services:
+
+  # Configuration for the discord application
+  app:
+    container_name: ${PROJECT}-app
+    image: ${PROJECT-app}
+    build:
+      context: .
+      dockerfile: .docker/App/Dockerfile
+    command: node build/main.js
+    environment:
+      - BOT_TOKEN=${BOT_TOKEN}

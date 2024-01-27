@@ -1,0 +1,9 @@
+# files
+.vscode
+.env
+App/package-lock.json
+App/yarn.lock
+
+# folders
+App/build
+App/node_modules
