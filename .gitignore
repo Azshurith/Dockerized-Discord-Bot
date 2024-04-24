@@ -5,5 +5,5 @@ App/package-lock.json
 App/yarn.lock
 
 # folders
-App/build
-App/node_modules
+Node/build
+Node/node_modules

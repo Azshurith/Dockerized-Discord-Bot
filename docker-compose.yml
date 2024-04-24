@@ -4,13 +4,16 @@ version: "3"
 # Define the services that make up your application
 services:
 
-  # Configuration for the discord application
-  app:
-    container_name: ${PROJECT}-app
-    image: ${PROJECT-app}
-    build:
-      context: .
-      dockerfile: .docker/App/Dockerfile
-    command: node build/main.js
-    environment:
-      - BOT_TOKEN=${BOT_TOKEN}
+    # Configuration for the discord application
+    node:
+        container_name: ${PROJECT_NAME}-node
+        image: ${PROJECT_NAME}-node:${PROJECT_NAME}-${PROJECT_VERSION}
+        build:
+            context: .
+            dockerfile: ${NODE_DOCKER_FILE}/Dockerfile
+        volumes:
+            - ${NODE_DIRECTORY}:${NODE_WORK_DIRECTORY}
+        environment:
+            - BOT_TOKEN=${NODE_DISCORD_TOKEN}
+        working_dir: ${NODE_WORK_DIRECTORY}
+        command: sh -c "npm install && npm run dev"
